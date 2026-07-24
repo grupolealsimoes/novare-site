@@ -28,8 +28,6 @@ Procure por `EDITAR` no `index.html`. O que ainda falta:
 | Selo do Google | A contagem `9 avaliações` precisa ser atualizada quando entrarem novas |
 | Sobre a Novare | A foto da fundadora entra numa próxima atualização |
 | E-mail | Confirmar `contato@novarecontabilidade.com.br` |
-| LinkedIn | Confirmar a URL real (o Instagram já está em @contabilidade.novare) |
-| `<link rel="canonical">` e Open Graph | Trocar pelo domínio final |
 | Telefone | O site usa (85) 99677-8884; o perfil do Google mostra (85) 99980-0899 — alinhar se for o caso |
 
 Já estão com conteúdo real: as **6 logos de clientes**, os **3 depoimentos** (avaliações publicadas no Google, com nome do autor), o **mapa** com CE, SP e SC, as **4 fotos** das abas por porte, o WhatsApp, o endereço, o Instagram @contabilidade.novare e o mapa do rodapé.
@@ -49,7 +47,11 @@ Formspree, Netlify Forms ou similar sem mexer no layout.
 
 1. Suba **todos os arquivos e pastas** no repositório (mantendo a estrutura de `assets/`).
 2. Settings → Pages → Source: branch `main`, pasta `/ (root)` → Save.
-3. O site fica disponível em `https://SEU-USUARIO.github.io/NOME-DO-REPO/`.
+3. O site fica disponível em `https://grupolealsimoes.github.io/novare-site/`.
+
+> As tags `canonical`, Open Graph e Schema.org já apontam para esse endereço.
+> Se um dia migrarem para domínio próprio, troque as 5 ocorrências de
+> `https://grupolealsimoes.github.io/novare-site/` no topo do `index.html`.
 
 ## Observações técnicas
 
