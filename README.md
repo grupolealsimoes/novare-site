@@ -27,7 +27,6 @@ Procure por `EDITAR` no `index.html`. O que ainda falta:
 |---|---|
 | Selo do Google | A contagem `9 avaliações` precisa ser atualizada quando entrarem novas |
 | Sobre a Novare | A foto da fundadora entra numa próxima atualização |
-| E-mail | Confirmar `contato@novarecontabilidade.com.br` |
 | Telefone | O site usa (85) 99677-8884; o perfil do Google mostra (85) 99980-0899 — alinhar se for o caso |
 
 Já estão com conteúdo real: as **6 logos de clientes**, os **3 depoimentos** (avaliações publicadas no Google, com nome do autor), o **mapa** com CE, SP e SC, as **4 fotos** das abas por porte, o WhatsApp, o endereço, o Instagram @contabilidade.novare e o mapa do rodapé.
@@ -49,9 +48,20 @@ Formspree, Netlify Forms ou similar sem mexer no layout.
 2. Settings → Pages → Source: branch `main`, pasta `/ (root)` → Save.
 3. O site fica disponível em `https://grupolealsimoes.github.io/novare-site/`.
 
-> As tags `canonical`, Open Graph e Schema.org já apontam para esse endereço.
-> Se um dia migrarem para domínio próprio, troque as 5 ocorrências de
-> `https://grupolealsimoes.github.io/novare-site/` no topo do `index.html`.
+## Domínio próprio (já configurado)
+
+O site está apontado para **www.novarecontabilidade.com** via arquivo `CNAME`
+na raiz do repositório. As tags `canonical`, Open Graph, Schema.org, `sitemap.xml`
+e `robots.txt` já usam esse endereço.
+
+DNS configurado na Secrel:
+- 4 registros **A** no domínio raiz → IPs do GitHub Pages (185.199.108/109/110/111.153)
+- 1 registro **CNAME** em `www` → `grupolealsimoes.github.io`
+- Registros **MX** (e-mail) mantidos sem alteração
+
+Se um dia trocarem de domínio de novo, é só editar o arquivo `CNAME`, e trocar as
+mesmas 5 ocorrências de `https://www.novarecontabilidade.com/` no topo do
+`index.html`, além do `sitemap.xml` e do `robots.txt`.
 
 ## Observações técnicas
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grupolealsimoes.github.io/novare-site/sitemap.xml
+Sitemap: https://www.novarecontabilidade.com/sitemap.xml
