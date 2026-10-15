@@ -35,28 +35,29 @@ Usamos cookies de análise (Google Analytics) para entender como o site é usado
         ativados se você aceitar. Saiba mais na nossa <a href="/politica-de-privacidade" class="font-semibold text-novare underline underline-offset-4">Política de Privacidade</a>.
 </p><div class="mt-4 flex flex-col gap-2 sm:flex-row sm:justify-end"><button type="button" data-cookies="recusar" class="btn btn-ghost !px-5 !py-2.5 !text-[14px]">Recusar</button><button type="button" data-cookies="aceitar" class="btn btn-primary !px-5 !py-2.5 !text-[14px]">Aceitar</button></div></div><script>(function(){const id = "G-SE3JPV86N8";
 
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        wait_for_update: 500,
+      });
+      try { if (localStorage.getItem("novare-cookies-v1") === "aceito") window.gtag("consent", "update", { analytics_storage: "granted" }); } catch (e) {}
+      window.gtag("js", new Date());
+      window.gtag("config", id);
+    })();</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3JPV86N8"></script><script>
       (function () {
         var CHAVE = "novare-cookies-v1";
         var aviso = document.getElementById("avisoCookies");
         function ler() { try { return localStorage.getItem(CHAVE); } catch (e) { return null; } }
         function gravar(v) { try { localStorage.setItem(CHAVE, v); } catch (e) {} }
+        function aceitou() { return ler() === "aceito"; }
 
-        function carregarAnalytics() {
-          if (window.__novareGA) return;
-          window.__novareGA = true;
-          window.dataLayer = window.dataLayer || [];
-          window.gtag = function () { window.dataLayer.push(arguments); };
-          window.gtag("js", new Date());
-          window.gtag("config", id);
-          var s = document.createElement("script");
-          s.async = true;
-          s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
-          document.head.appendChild(s);
-        }
-
-        // Eventos de conversão (só são enviados se o Analytics foi aceito)
+        // Eventos de conversão: só para quem aceitou os cookies
         document.addEventListener("click", function (e) {
-          if (!window.__novareGA) return;
+          if (!aceitou()) return;
           var a = e.target.closest && e.target.closest("a[href]");
           if (!a) return;
           var h = a.getAttribute("href") || "";
@@ -70,7 +71,7 @@ Usamos cookies de análise (Google Analytics) para entender como o site é usado
         function decidir(v) {
           gravar(v);
           aviso.classList.add("hidden");
-          if (v === "aceito") carregarAnalytics();
+          window.gtag("consent", "update", { analytics_storage: v === "aceito" ? "granted" : "denied" });
         }
         aviso.addEventListener("click", function (e) {
           var b = e.target.closest("[data-cookies]");
@@ -82,7 +83,6 @@ Usamos cookies de análise (Google Analytics) para entender como o site é usado
         });
 
         var escolha = ler();
-        if (escolha === "aceito") carregarAnalytics();
-        else if (escolha !== "recusado") aviso.classList.remove("hidden");
+        if (escolha !== "aceito" && escolha !== "recusado") aviso.classList.remove("hidden");
       })();
-    })();</script>  <script src="/assets/js/gsap.min.js" defer></script> <script src="/assets/js/ScrollTrigger.min.js" defer></script> <script src="/assets/js/aos.js" defer></script> <script src="/assets/js/main.js" defer></script>  </body> </html>
+    </script>  <script src="/assets/js/gsap.min.js" defer></script> <script src="/assets/js/ScrollTrigger.min.js" defer></script> <script src="/assets/js/aos.js" defer></script> <script src="/assets/js/main.js" defer></script>  </body> </html>
