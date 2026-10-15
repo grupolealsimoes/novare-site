@@ -121,7 +121,8 @@
 
   /* ---------- 8. FORMULÁRIO → WHATSAPP ---------- */
   var form = $("#leadForm"), formError = $("#formError");
-  var WHATS = "5585996778884";
+  // Número vem do atributo data-whatsapp do formulário (src/config/escritorio.ts)
+  var WHATS = form ? form.getAttribute("data-whatsapp") : "";
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();

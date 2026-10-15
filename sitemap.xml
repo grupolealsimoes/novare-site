@@ -6,7 +6,52 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.novarecontabilidade.com/politica-de-privacidade.html</loc>
+    <loc>https://www.novarecontabilidade.com/contabilidade-em-eusebio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/assessoria-contabil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/abertura-de-empresas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/consultoria-tributaria</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/departamento-pessoal</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/bpo-financeiro</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/imposto-de-renda</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/certificado-digital</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/servicos/consultoria-empresarial</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.novarecontabilidade.com/politica-de-privacidade</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
