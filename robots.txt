@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /sistema
 
-Sitemap: https://www.novarecontabilidade.com/sitemap.xml
+Sitemap: https://novarecontabilidade.com/sitemap.xml
